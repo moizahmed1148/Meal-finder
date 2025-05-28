@@ -18,7 +18,7 @@ const Header = () => {
       <li>
         <NavLink
           to="/"
-          className={({isActive}) => `transition font-medium text-black ${isActive ? 'text-black border rounded-full py-2 px-5' : ''} `}
+          className={({isActive}) => `transition font-medium text-gray-400 ${isActive ? 'text-gray-500 border rounded-full py-2 px-5' : 'text-white'} `}
           style={{ fontFamily: '"Montserrat", sans-serif' }}
         >
           Home
@@ -27,7 +27,7 @@ const Header = () => {
       <li>
         <NavLink
           to="/categories"
-          className={({isActive}) => `transition font-medium text-black ${isActive ? 'text-black border rounded-full py-2 px-5' : ''}` }
+          className={({isActive}) => `transition font-medium text-gray-400 ${isActive ? 'text-gray-500 border rounded-full py-2 px-5' : 'text-white'}` }
           style={{ fontFamily: '"Montserrat", sans-serif' }}
         >
           Category
@@ -36,7 +36,7 @@ const Header = () => {
       <li>
         <NavLink
           to="/about-us"
-          className={({isActive}) => `transition font-medium text-black ${isActive ? 'text-black border rounded-full py-2 px-5' : ''}` }
+          className={({isActive}) => `transition font-medium text-gray-400 ${isActive ? 'text-gray-500 border rounded-full py-2 px-5' : 'text-white'}` }
           style={{ fontFamily: '"Montserrat", sans-serif' }}
         >
           About
@@ -45,19 +45,13 @@ const Header = () => {
       <li>
         <NavLink
           to="/contact-us"
-          className={({isActive}) => `transition font-medium text-black ${isActive ? 'text-black border rounded-full py-2 px-5' : ''}` }
+          className={({isActive}) => `transition font-medium text-gray-400 ${isActive ? 'text-gray-500 border rounded-full py-2 px-5' : 'text-white'}` }
           style={{ fontFamily: '"Montserrat", sans-serif' }}
         >
           Contact
         </NavLink>
       </li>   
-    </ul>
-
-    {/* Search Bar */}
-    {/* <div className="flex items-center border pl-4 gap-2 bg-white border-gray-300 h-[46px] rounded-full overflow-hidden max-w-md w-full">
-        <input type="text" className="w-full h-full outline-none text-sm text-gray-700" placeholder="Search..." style={{ fontFamily:'"Montserrat", sans-serif' }}  />
-        <button type="submit" className="bg-gray-900 hover:bg-black  w-28 h-9 hover:cursor-pointer rounded-full text-sm text-white mr-[5px] transition-all font-medium" style={{ fontFamily:'"Montserrat", sans-serif' }} >Search</button>
-    </div> */}
+    </ul> 
 <button
   type="button"
   className="hidden md:block w-40 py-3 px-4 text-sm font-medium text-white bg-gradient-to-r from-slate-700 to-slate-900 rounded-full shadow hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-200 hover:cursor-pointer"
@@ -66,8 +60,8 @@ const Header = () => {
 </button>
 
   {
-    open ? <img src="close.png" alt="" onClick={() => setOpen(prev => !prev)} /> : 
-    <img src="humburger.png" alt="" onClick={() => setOpen(prev => !prev)} />
+    open ? <img src="close.png" alt="" className="md:hidden" onClick={() => setOpen(prev => !prev)} /> : 
+    <img src="humburger.png" alt="" className="md:hidden" onClick={() => setOpen(prev => !prev)} />
   }
 </nav>
 {/* Mobile menu */}
