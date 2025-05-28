@@ -7,7 +7,7 @@ const Header = () => {
 <nav className="h-[70px] relative w-full px-6 md:px-16 lg:px-24 xl:px-32 flex items-center justify-between z-30 bg-gray-800 transition-all">
 
     {/* Logo */}
-    <h1 className="text-3xl font-extrabold text-white" style={{ fontFamily: '"Exile", system-ui' }}>RECIPE FINDER</h1>
+    <h1 className="text-3xl font-extrabold text-white" style={{ fontFamily: '"Exile", system-ui' }}>MEAL FINDER</h1>
 
     {/* Desktop Menu */}
     <ul className="text-white md:flex hidden items-center gap-6">
